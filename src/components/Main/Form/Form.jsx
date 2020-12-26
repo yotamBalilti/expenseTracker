@@ -41,7 +41,7 @@ const Form = () => {
     setFormData(initialState);
   };
 
-  const selectedType =
+  const selectedCategories =
     formData.type === "Income" ? incomeCategories : expenseCategories;
 
   return (
@@ -72,7 +72,7 @@ const Form = () => {
               setFormData({ ...formData, category: e.target.value })
             }
           >
-            {selectedType.map(c => (
+            {selectedCategories.map(c => (
               <MenuItem key={c.type} value={c.type}>
                 {c.type}
               </MenuItem>
