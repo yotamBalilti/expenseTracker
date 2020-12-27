@@ -17,7 +17,7 @@ const useTransactions = title => {
   );
   const categories = title === "Income" ? incomeCategories : expenseCategories;
 
-  console.log({ transactionsPerType, total, categories });
+  // console.log({ transactionsPerType, total, categories });
 
   transactionsPerType.forEach(t => {
     const category = categories.find(c => c.type === t.category);
@@ -30,7 +30,7 @@ const useTransactions = title => {
     datasets: [
       {
         data: filteredCategories.map(c => c.amount),
-        bacgroundColor: filteredCategories.map(c => c.color),
+        backgroundColor: filteredCategories.map(c => c.color),
       },
     ],
     labels: filteredCategories.map(c => c.type),
